@@ -8,9 +8,6 @@ export const AppDataSource =  new DataSource({
     username: "root",
     password: "",
     database: "cursos",
-    synchronize: true,
     logging: true,
-    entities: [Post, Category],
-    subscribers:[],
-    migrations:[]
+    entities: [],
 });
