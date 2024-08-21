@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm"
 
 @Entity()
-export class Estudiante{
+export class Profesor{
 
     @PrimaryGeneratedColumn()
     id: number
@@ -17,6 +17,12 @@ export class Estudiante{
 
     @Column()
     email: String
+
+    @Column()
+    profesion: String
+
+    @Column()
+    telefono: String
 
     @CreateDateColumn()
     createdAt: Date
