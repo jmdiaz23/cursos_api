@@ -37,10 +37,10 @@ class CursosController {
 
     async ingresar(req: Request, res: Response) {
         try {
-            const { profesor_id } = req.body;
+            const { profesor } = req.body;
 
-            const profesor = await Profesor.findOneBy({ id: Number(profesor_id)});
-            if (!profesor) {
+            const profesorRegistrado = await Profesor.findOneBy({ id: Number(profesor)});
+            if (!profesorRegistrado) {
                 throw new Error('Profesor no encontrado');
             }
 
@@ -55,10 +55,10 @@ class CursosController {
     async actualizar(req: Request, res: Response) {
         const { id } = req.params;
         try {
-            const { profesor_id } = req.body;
+            const { profesor } = req.body;
 
-            const profesor = await Profesor.findOneBy({ id: Number(profesor_id) });
-            if (!profesor) {
+            const profesorRegistro = await Profesor.findOneBy({ id: Number(profesor) });
+            if (!profesorRegistro) {
                 throw new Error('Profesor no encontrado');
             }
 
